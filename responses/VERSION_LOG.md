@@ -41,4 +41,22 @@ Tracks each round of reviewer responses.
 - **New script:** `scripts/AN4_balanced_panel.do`
 - **Remaining author action:** Run AN4_balanced_panel.do to fill in balanced-panel N in Methods
 - **Quality score:** 90/100
-- **Status:** NEAR-FINAL — ready for author review and manuscript edits
+- **Status:** SUPERSEDED by v2.1 (proofreading pass)
+
+### v2.1 — 2026-02-23
+- **Input:** Same as v2; no new analysis
+- **Changes from v2:** 26 proofreading fixes (see `quality_reports/responses_v2_report.md`)
+  - CRITICAL: Removed 4 internal author-action/script notes from submission text
+  - MAJOR: Fixed opening letter tense (present perfect throughout); added missing article
+  - MAJOR: Removed dismissive "already implemented prior to this review round" framing
+  - MAJOR: Replaced "differently-raced subgroups" with standard phrasing
+  - MAJOR: Fixed subject-verb agreement ("version that does not contain")
+  - MAJOR: Added [CITE] markers for unsupported "standard practice" claims (R2.2)
+  - MAJOR: Updated eTable 5–20 title to "Negative Control Analyses" (was "Placebo Tests")
+  - MINOR: DiD capitalization, N spacing, "data set" spelling, eTable qualifier, JAMA NO clarified
+- **Remaining author actions:**
+  1. Fill in `[N]` (run `scripts/AN4_balanced_panel.do`)
+  2. Fill in `[DATE OF SUBMISSION]`
+  3. Replace two `[CITE]` markers in R2.2 with actual references
+- **Quality score:** 93/100
+- **Status:** NEAR-FINAL — pending 3 author actions above
