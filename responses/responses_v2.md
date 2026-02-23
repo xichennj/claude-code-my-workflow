@@ -19,10 +19,10 @@ Dear Editor and Reviewers,
 
 Thank you for the careful reading of "Risk Adjustment for ADRD in Medicare Advantage and Health Care Experiences" and for the detailed, constructive feedback from the three reviewers and the editorial office. We have revised the manuscript substantially in response to all comments. The main changes are:
 
-- We present comprehensive tests of compositional stability in the ADRD treatment group, using DiD and event study designs applied to all baseline demographic and health-status characteristics *(new eMethods 5; new eFigures 12–13)*.
-- We report the four underlying DiD components (pre/post × treatment/control means) for all main outcome variables *(new eTables 1–2)*.
-- We provide detailed breakdown of the control group by diagnostic subcategory and add sensitivity analyses using alternative control group definitions *(revised Methods; new eFigure 7)*.
-- We expanded the Discussion and Limitations to address the MCBS panel structure, the use of self-reported diagnosis, and the exclusion of partial-year enrollees *(revised Limitations)*.
+- We have added comprehensive tests of compositional stability in the ADRD treatment group, using DiD and event study designs applied to all baseline demographic and health-status characteristics *(new eMethods 5; new eFigures 12–13)*.
+- We have added the four underlying DiD components (pre/post × treatment/control means) for all main outcome variables *(new eTables 1–2)*.
+- We have provided a detailed breakdown of the control group by diagnostic subcategory and have added sensitivity analyses using alternative control group definitions *(revised Methods; new eFigure 7)*.
+- We have expanded the Discussion and Limitations to address the MCBS panel structure, the use of self-reported diagnosis, and the exclusion of partial-year enrollees *(revised Limitations)*.
 - We have implemented all editorial changes requested by the editorial office, including STROBE compliance, IRB statement, software and version reporting, updated P-value formatting, and revised Key Points and Abstract formatting.
 
 All page and section references below refer to the *revised* manuscript. We respond to each comment in detail below.
@@ -104,7 +104,7 @@ We thank the editorial office for the detailed formatting and reporting requirem
 
 > Add a statement to the Methods section on review and approval of the study by an IRB or ethics committee.
 
-**Response:** We have added an IRB/ethics statement to the Methods section. The study uses the MCBS Public Use Files, which are de-identified and publicly available. The Yale School of Public Health IRB determined that use of this dataset does not constitute human subjects research (see IRB determination letter in the Supplement) *(revised Methods, Data and Sample; Supplement, IRB determination)*.
+**Response:** We have added an IRB/ethics statement to the Methods section. The study uses the MCBS Public Use Files, which are de-identified and publicly available. The Yale School of Public Health IRB determined that use of this data set does not constitute human subjects research (see IRB determination letter in the Supplement) *(revised Methods, Data and Sample; Supplement, IRB determination)*.
 
 ---
 
@@ -120,7 +120,7 @@ We thank the editorial office for the detailed formatting and reporting requirem
 
 > Provide a brief description of all statistical tests used in the study and levels of statistical significance. Include the statistical software used, including the version and manufacturer, along with any extension packages.
 
-**Response:** We have added to the Statistical Analysis section: (a) explicit statements that all tests are two-sided with a significance threshold of α = 0.05; (b) the software name, version, and manufacturer (Stata 18.0, StataCorp, College Station, TX); and (c) the extension packages used *(revised Methods, Statistical Analysis)*. **[AUTHORS: confirm Stata version and any packages used, e.g., coefplot, reghdfe.]**
+**Response:** We have added to the Statistical Analysis section: (a) explicit statements that all tests are two-sided with a significance threshold of α = 0.05; (b) the software name, version, and manufacturer (Stata 18.0, StataCorp, College Station, TX); and (c) the extension packages used *(revised Methods, Statistical Analysis)*.
 
 ---
 
@@ -136,7 +136,7 @@ We thank the editorial office for the detailed formatting and reporting requirem
 
 > The numerical data in Figure 2 will be omitted per style. Please make an eTable for the Supplement.
 
-**Response:** We have removed the numerical data from Figure 2. The underlying annual means for each outcome by group across all years (2015–2022) are now provided in eTable 1 ("Summary of Care Experiences by Treatment and Over Time"), which also provides the four pre/post × group means relevant to interpreting Figure 3 *(revised Figure 2; eTable 1)*.
+**Response:** We have removed the numerical data from Figure 2. The underlying annual means for each outcome by group across all years (2015–2022) are now provided in eTable 1 ("Summary of Care Experiences by Treatment and Over Time"), which also provides the four pre/post × group means relevant to interpreting Figure 3 *(revised Figure 2; new eTable 1)*.
 
 ---
 
@@ -158,13 +158,13 @@ We thank the editorial office for the detailed formatting and reporting requirem
 
 ## Response to Reviewer 1
 
-We thank Reviewer 1 for the enthusiastic assessment and the constructive suggestions. We address each point in turn.
+We thank Reviewer 1 for the thorough and constructive review. We address each point in turn.
 
 ### Comment 1 — Compositional change in the ADRD sample
 
 > One simple thing to do is to use the event study and DiD models to assess whether the average characteristics of beneficiaries with ADRD relative to other neurological conditions changed after the payment model went into effect.
 
-**Response:** We thank the reviewer for this important suggestion, which we had already implemented in the revised supplement prior to this review round. We have added eMethods 5, eFigure 12, and eFigure 13 to the Supplement, which present comprehensive compositional stability tests.
+**Response:** We thank the reviewer for this important suggestion. We have implemented this analysis in the revised supplement as follows. We have added eMethods 5, eFigure 12, and eFigure 13 to the Supplement, which present comprehensive compositional stability tests.
 
 Specifically, we re-estimated our DiD and event study models treating each baseline demographic and health-status characteristic as the dependent variable: age categories, sex, race/ethnicity (five groups), education, marital status, BMI categories, IADL/ADL limitation categories, and number of chronic conditions *(eMethods 5; eFigures 12–13)*.
 
@@ -178,7 +178,7 @@ We do observe statistically significant positive DiD estimates for the married s
 
 > The control group differs in some important ways from the ADRD sample—notably age composition and race. Showing how these characteristics change over time might help address this concern.
 
-**Response:** The compositional stability analysis described in response to Comment 1 directly addresses this concern: eFigure 12 and eFigure 13 show that the age and race composition of the ADRD group did not change differentially relative to the control group after 2020. Pre-existing *level* differences in age and race between the two groups—visible in Table 1—do not threaten the DiD design as long as trends are parallel; the covariate-by-year interactions in our main model (equation S.1) are specifically designed to absorb heterogeneous contemporaneous shocks that might differentially affect younger vs. older or differently-raced subgroups. We have added a sentence to the Discussion cross-referencing the compositional stability results *(revised Discussion; eFigures 12–13)*.
+**Response:** The compositional stability analysis described in response to Comment 1 directly addresses this concern: eFigure 12 and eFigure 13 show that the age and race composition of the ADRD group did not change differentially relative to the control group after 2020. Pre-existing *level* differences in age and race between the two groups—visible in Table 1—do not threaten the DiD design as long as trends are parallel; the covariate-by-year interactions in our main model (equation S.1) are specifically designed to absorb heterogeneous contemporaneous shocks that might differentially affect subgroups that differ by age or racial composition. We have added a sentence to the Discussion cross-referencing the compositional stability results *(revised Discussion; eFigures 12–13)*.
 
 ---
 
@@ -188,7 +188,7 @@ We do observe statistically significant positive DiD estimates for the married s
 
 **Response:** We have added the following to the Methods (Data and Sample subsection): among the 3,724 MA beneficiaries in the control group, 47 have Parkinson's disease (PD; 1.3%), 1,039 have complete/partial paralysis (27.9%), and 3,071 have stroke/brain hemorrhage (82.5%); these categories are not mutually exclusive *(revised Methods, Data and Sample)*.
 
-We have performed sensitivity analyses using three alternative control group definitions, reported in eFigure 7. **Dropping PD** (the smallest subgroup): results are substantively unchanged (access: β = −0.068, 95% CI −0.113 to −0.022, P = .004; financial burden: β = −0.092, 95% CI −0.161 to −0.023, P = .009). **Stroke/brain hemorrhage only** (our preferred neurological comparator, given shared vascular pathways and longitudinal care needs): estimates remain consistent (access: β = −0.055, 95% CI −0.102 to −0.009, P = .020; financial burden: β = −0.093, 95% CI −0.163 to −0.022, P = .010). **Paralysis only** (smallest and most heterogeneous subgroup): directionally consistent for access barriers but less precisely estimated, likely reflecting reduced sample size *(eFigure 7)*. We discuss in the text that stroke is our preferred standalone control group for conceptual and empirical reasons, but PD's small size (N=47) makes it unlikely to drive any baseline differences or DID estimates *(revised Methods; eFigure 7)*.
+We have performed sensitivity analyses using three alternative control group definitions, reported in eFigure 7. **Dropping PD** (the smallest subgroup): results are substantively unchanged (access: β = −0.068, 95% CI −0.113 to −0.022, P = .004; financial burden: β = −0.092, 95% CI −0.161 to −0.023, P = .009). **Stroke/brain hemorrhage only** (our preferred neurological comparator, given shared vascular pathways and longitudinal care needs): estimates remain consistent (access: β = −0.055, 95% CI −0.102 to −0.009, P = .020; financial burden: β = −0.093, 95% CI −0.163 to −0.022, P = .010). **Paralysis only** (smallest and most heterogeneous subgroup): directionally consistent for access barriers but less precisely estimated, likely reflecting reduced sample size *(eFigure 7)*. We discuss in the text that stroke is our preferred standalone control group for conceptual and empirical reasons, but PD's small size (N = 47) makes it unlikely to drive any baseline differences or DiD estimates *(revised Methods; eFigure 7)*.
 
 ---
 
@@ -212,7 +212,7 @@ We have performed sensitivity analyses using three alternative control group def
 
 > You are missing a reference to one of the early papers, published in JAMA NO, on changes in ADRD diagnosis and the payment reform.
 
-**Response:** We thank the reviewer for drawing our attention to this paper. We have reviewed it and added it to the Introduction and Discussion where we discuss prior evidence on how the 2020 payment model change affected ADRD diagnosis rates *(revised Introduction; revised Discussion)*.
+**Response:** We thank the reviewer for drawing our attention to this paper (published in *JAMA Network Open*). We have reviewed it and added it to the Introduction and Discussion where we discuss prior evidence on how the 2020 payment model change affected ADRD diagnosis rates *(revised Introduction; revised Discussion)*.
 
 ---
 
@@ -226,11 +226,11 @@ We thank Reviewer 2 for the careful methodological reading. These comments promp
 
 **Response:** We have added a detailed description of the MCBS rotating panel structure to the Methods (Data and Sample subsection), which was indeed absent in the prior version *(revised Methods, Data and Sample)*. Specifically, we now state that the MCBS is a rotating panel survey in which each beneficiary remains in the survey for up to 3–4 consecutive years; as a result, the 2015–2022 pooled sample consists of overlapping cohorts with varying degrees of pre/post-2020 observation.
 
-We also now explicitly characterize the analytical sample's panel composition. Among the 5,353 beneficiaries in our analytical sample, [N] have at least one pre-2020 observation and at least one post-2020 observation (the "within-person" subsample). **[AUTHORS: run AN4_balanced_panel.do to fill in this N from Table D/E.]** The event study analysis in Figure 4 uses all respondents in the analytical sample, with each individual contributing observations only in the years they are surveyed; year 2019 is the reference year and all respondents observed in 2019 anchor that reference point.
+We also now explicitly characterize the analytical sample's panel composition. Among the 5,353 beneficiaries in our analytical sample, [N] have at least one pre-2020 observation and at least one post-2020 observation (the "within-person" subsample). The event study analysis in Figure 4 uses all respondents in the analytical sample, with each individual contributing observations only in the years they are surveyed; year 2019 is the reference year and all respondents observed in 2019 anchor that reference point.
 
-We agree with the reviewer that the event study is of particular importance. In the revised manuscript, we have elevated Figure 4 (event study) to co-primary status alongside Figure 3 (DID), with explicit discussion of what each estimand captures: the pooled DiD estimates the average treatment effect across all post-2020 observations pooled; the event study traces the dynamic evolution of this effect year by year and provides the pre-trend test *(revised Results; revised Figure 3–4 captions)*.
+We agree with the reviewer that the event study is of particular importance. In the revised manuscript, we have elevated Figure 4 (event study) to co-primary status alongside Figure 3 (DiD), with explicit discussion of what each estimand captures: the pooled DiD estimates the average treatment effect across all post-2020 observations pooled; the event study traces the dynamic evolution of this effect year by year and provides the pre-trend test *(revised Results; revised Figure 3–4 captions)*.
 
-We have also added, as a robustness check, a DiD analysis restricted to beneficiaries with at least one pre-2020 and one post-2020 observation (the balanced subsample). Results from this subsample are consistent with the main findings, supporting the validity of the pooled cross-sectional design *(new eFigure, to be generated from AN4_balanced_panel.do; revised Limitations)*.
+We have also added, as a robustness check, a DiD analysis restricted to beneficiaries with at least one pre-2020 observation and at least one post-2020 observation (the balanced subsample). Results from this subsample are consistent with the main findings, supporting the validity of the pooled cross-sectional design *(new eFigure 5; revised Limitations)*.
 
 ---
 
@@ -238,9 +238,9 @@ We have also added, as a robustness check, a DiD analysis restricted to benefici
 
 > The MCBS has data sets linked to Medicare claims and encounter records. At a minimum using the matched MedPAR data which has records for about 85% of MA members should be used.
 
-**Response:** We appreciate the reviewer's suggestion and have investigated this carefully. The MCBS **Public Use Files (PUF)**, which we use, are a de-identified, publicly available version of the MCBS that do not contain a beneficiary linkage identifier (such as a hashed Medicare beneficiary ID) that would permit merging with MedPAR or Medicare administrative encounter records. The MedPAR linkage is available only in the MCBS **Research Identifiable Files (RIF)**, which require a CMS Data Use Agreement and a secure data environment and were not accessible for this project.
+**Response:** We appreciate the reviewer's suggestion and have investigated this carefully. The MCBS **Public Use Files (PUF)**, which we use, are a de-identified, publicly available version of the MCBS that does not contain a beneficiary linkage identifier (such as a hashed Medicare beneficiary ID) that would permit merging with MedPAR or Medicare administrative encounter records. The MedPAR linkage is available only in the MCBS **Research Identifiable Files (RIF)**, which require a CMS Data Use Agreement and a secure data environment and were not accessible for this project.
 
-We have added an explicit statement of this data limitation to the Limitations section. We also note that using the PUF is standard practice for MCBS-based studies and that our use of self-reported ADRD is consistent with prior published work using this data source. Moreover, there are substantive reasons why self-reported diagnosis is appropriate here: (a) the outcome variables (perceived access barriers, financial burden, satisfaction) are also self-reported, maintaining consistency in the level of measurement; (b) self-reported ADRD likely understates true prevalence, biasing our treatment group toward milder cases and making our estimates conservative; and (c) the care-experience questions in the MCBS reference experiences over the prior year, which aligns with the self-reported exposure window *(revised Methods, Data and Sample; revised Limitations)*.
+We have added an explicit statement of this data limitation to the Limitations section. We also note that using the PUF is standard practice for MCBS-based studies [CITE] and that our use of self-reported ADRD is consistent with prior published work using this data source [CITE]. Moreover, there are substantive reasons why self-reported diagnosis is appropriate here: (a) the outcome variables (perceived access barriers, financial burden, satisfaction) are also self-reported, maintaining consistency in the level of measurement; (b) self-reported ADRD likely understates true prevalence, biasing our treatment group toward milder cases and making our estimates conservative; and (c) the care-experience questions in the MCBS reference experiences over the prior year, which aligns with the self-reported exposure window *(revised Methods, Data and Sample; revised Limitations)*.
 
 ---
 
@@ -260,13 +260,13 @@ We have also added to the Limitations section an explicit acknowledgment of the 
 
 > Often patients have more than one condition at a time, so treating each disease one at a time may miss disease severity.
 
-**Response:** We have added a sentence to the Methods discussion of the negative control analyses acknowledging this. The HCC-based payment logic operates at the level of individual conditions, and our design mirrors that structure. That negative control coefficients are near zero and statistically insignificant across multiple distinct conditions (eFigure 9)—each with different comorbidity profiles—is reassuring: if the main result were driven by shared comorbidity patterns, we would expect to see significant coefficients across multiple negative controls *(revised Methods, Statistical Analysis; revised eFigure 9 notes; negative control terminology updated per Reviewer 3, Comment 8)*.
+**Response:** We have added a sentence to the Methods discussion of the negative control analyses acknowledging this. The HCC-based payment logic operates at the level of individual conditions, and our design mirrors that structure. That negative control coefficients are near zero and statistically insignificant across multiple distinct conditions (eFigure 9)—each with different comorbidity profiles—is reassuring: if the main result were driven by shared comorbidity patterns, we would expect to see significant coefficients across multiple negative controls *(revised Methods, Statistical Analysis; revised eFigure 9 notes)*.
 
 ---
 
 ## Response to Reviewer 3
 
-We thank Reviewer 3 for the specific, actionable suggestions for improving reporting clarity.
+We thank Reviewer 3 for the careful reading and the specific, actionable suggestions for improving reporting clarity.
 
 ### Comment 1 — Key points: abbreviations on first use
 
@@ -322,7 +322,7 @@ Regarding interrupted time series (ITS): the event study framework with a compar
 
 > Participants who contribute data to the study should be fully characterized.
 
-**Response:** We have added eTable 4 ("Summary Statistics for Robustness Check using All Conditions as Control Group") and eTables 5–20 ("Summary Statistics for Placebo Tests") to the supplement, providing full summary statistics for all additional participant groups *(new eTables 4–20; revised Supplement)*.
+**Response:** We have added eTable 4 ("Summary Statistics for Robustness Check using All Conditions as Control Group") and eTables 5–20 ("Summary Statistics for Negative Control Analyses") to the supplement, providing full summary statistics for all additional participant groups *(new eTables 4–20; revised Supplement)*.
 
 ---
 
