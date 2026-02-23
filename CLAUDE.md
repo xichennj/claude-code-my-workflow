@@ -5,7 +5,7 @@
      Keep this file under ~150 lines — Claude loads it every session.
      See the guide at docs/workflow-guide.html for full documentation. -->
 
-**Project:** [YOUR PROJECT NAME]
+**Project:** [YOUR PAPER TITLE] — Reviewer Response Drafting
 **Institution:** [YOUR INSTITUTION]
 **Branch:** main
 
@@ -15,7 +15,7 @@
 
 - **Plan first** -- enter plan mode before non-trivial tasks; save plans to `quality_reports/plans/`
 - **Verify after** -- compile/render and confirm output at the end of every task
-- **Single source of truth** -- Beamer `.tex` is authoritative; Quarto `.qmd` derives from it
+- **Single source of truth** -- `reviewer_comments/` + `manuscript/` are immutable inputs; `responses/` is the only output
 - **Quality gates** -- nothing ships below 80/100
 - **[LEARN] tags** -- when corrected, save `[LEARN:category] wrong → right` to MEMORY.md
 
@@ -27,17 +27,16 @@
 [YOUR-PROJECT]/
 ├── CLAUDE.MD                    # This file
 ├── .claude/                     # Rules, skills, agents, hooks
-├── Bibliography_base.bib        # Centralized bibliography
-├── Figures/                     # Figures and images
-├── Preambles/header.tex         # LaTeX headers
-├── Slides/                      # Beamer .tex files
-├── Quarto/                      # RevealJS .qmd files + theme
-├── docs/                        # GitHub Pages (auto-generated)
-├── scripts/                     # Utility scripts + R code
-├── quality_reports/             # Plans, session logs, merge reports
-├── explorations/                # Research sandbox (see rules)
-├── templates/                   # Session log, quality report templates
-└── master_supporting_docs/      # Papers and existing slides
+├── manuscript/                  # Paper source (*.tex preferred; *.docx, *.pdf accepted)
+├── reviewer_comments/           # Reviewer files (reviewer1.txt, ae_comments.txt, etc.)
+├── responses/                   # Generated output (responses_v1.tex, .md, .docx)
+├── data/                        # Data files for any required new analysis
+├── output/                      # Tables, figures from new analysis
+├── scripts/                     # R / Python scripts for new analysis
+├── quality_reports/             # Plans, session logs, manuscript reviews
+├── explorations/                # Research sandbox
+├── templates/                   # Session log, quality report, response-letter templates
+└── master_supporting_docs/      # Supporting papers and prior versions
 ```
 
 ---
@@ -45,17 +44,20 @@
 ## Commands
 
 ```bash
-# LaTeX (3-pass, XeLaTeX only)
-cd Slides && TEXINPUTS=../Preambles:$TEXINPUTS xelatex -interaction=nonstopmode file.tex
-BIBINPUTS=..:$BIBINPUTS bibtex file
-TEXINPUTS=../Preambles:$TEXINPUTS xelatex -interaction=nonstopmode file.tex
-TEXINPUTS=../Preambles:$TEXINPUTS xelatex -interaction=nonstopmode file.tex
+# Draft reviewer responses (produces .tex + .md in responses/)
+/draft-responses v1
 
-# Deploy Quarto to GitHub Pages
-./scripts/sync_to_docs.sh LectureN
+# Compile response document to PDF
+cd responses && pdflatex responses_v1.tex
 
-# Quality score
-python scripts/quality_score.py Quarto/file.qmd
+# Convert Markdown to Word (requires pandoc)
+pandoc responses/responses_v1.md -o responses/responses_v1.docx
+
+# Review manuscript before drafting responses
+/review-paper manuscript/[filename].tex
+
+# Run R analysis for new empirical checks
+Rscript scripts/[analysis_script].R
 ```
 
 ---
@@ -74,60 +76,49 @@ python scripts/quality_score.py Quarto/file.qmd
 
 | Command | What It Does |
 |---------|-------------|
-| `/compile-latex [file]` | 3-pass XeLaTeX + bibtex |
-| `/deploy [LectureN]` | Render Quarto + sync to docs/ |
-| `/extract-tikz [LectureN]` | TikZ → PDF → SVG |
-| `/proofread [file]` | Grammar/typo/overflow review |
-| `/visual-audit [file]` | Slide layout audit |
-| `/pedagogy-review [file]` | Narrative, notation, pacing review |
+| `/draft-responses [vN]` | Draft full reviewer response document (LaTeX + Markdown + docx) |
+| `/review-paper [file]` | Manuscript review (5 lenses: identification, econometrics, data, lit, robustness) |
+| `/proofread [file]` | Grammar/typo/tone review of response document |
+| `/data-analysis [dataset]` | End-to-end R analysis for new empirical checks |
 | `/review-r [file]` | R code quality review |
-| `/qa-quarto [LectureN]` | Adversarial Quarto vs Beamer QA |
-| `/slide-excellence [file]` | Combined multi-agent review |
-| `/translate-to-quarto [file]` | Beamer → Quarto translation |
-| `/validate-bib` | Cross-reference citations |
-| `/devils-advocate` | Challenge slide design |
-| `/create-lecture` | Full lecture creation |
-| `/commit [msg]` | Stage, commit, PR, merge |
-| `/lit-review [topic]` | Literature search + synthesis |
+| `/lit-review [topic]` | Literature search + synthesis (for missing citations) |
 | `/research-ideation [topic]` | Research questions + strategies |
 | `/interview-me [topic]` | Interactive research interview |
-| `/review-paper [file]` | Manuscript review |
-| `/data-analysis [dataset]` | End-to-end R analysis |
+| `/validate-bib` | Cross-reference citations in manuscript |
+| `/commit [msg]` | Stage, commit, PR, merge |
 
 ---
 
-<!-- CUSTOMIZE: Replace the example entries below with your own
-     Beamer environments and Quarto CSS classes. These are examples
-     from the original project — delete them and add yours. -->
+## LaTeX Response Template Elements
 
-## Beamer Custom Environments
+| Command / Environment | Effect | Use Case |
+|-----------------------|--------|----------|
+| `\begin{refereequote}...\end{refereequote}` | Gray italic indented block | Displaying exact referee comment |
+| `\analysisneeded{description}` | Bold red placeholder | Flag required new empirical analysis |
+| `\msloc{location}` | Italic parenthetical | Cite manuscript location inline |
+| `\refereeheader{Referee N}` | Section divider | Heading for each referee's responses |
+| `\comment{N}{text}` | Comment block + response prompt | Individual comment + response pair |
 
-| Environment       | Effect        | Use Case       |
-|-------------------|---------------|----------------|
-| `[your-env]`      | [Description] | [When to use]  |
+## Response Document Conventions
 
-<!-- Example entries (delete and replace with yours):
-| `keybox` | Gold background box | Key points |
-| `highlightbox` | Gold left-accent box | Highlights |
-| `definitionbox[Title]` | Blue-bordered titled box | Formal definitions |
--->
-
-## Quarto CSS Classes
-
-| Class              | Effect        | Use Case       |
-|--------------------|---------------|----------------|
-| `[.your-class]`    | [Description] | [When to use]  |
-
-<!-- Example entries (delete and replace with yours):
-| `.smaller` | 85% font | Dense content slides |
-| `.positive` | Green bold | Good annotations |
--->
+| Convention | Rule |
+|------------|------|
+| Referee comment | Always quoted verbatim in `refereequote` |
+| Manuscript citation | Always explicit: "Section X.Y (p. N)" or "Equation (N)" |
+| Non-implemented suggestion | Always explained with substantive reason |
+| Analysis gaps | Always flagged with `\analysisneeded{}` before submission |
+| Tone | Formal + collegial; never defensive |
+| Version | Increment (`v1`, `v2`) — never overwrite |
 
 ---
 
 ## Current Project State
 
-| Lecture | Beamer | Quarto | Key Content |
-|---------|--------|--------|-------------|
-| 1: [Topic] | `Lecture01_Topic.tex` | `Lecture1_Topic.qmd` | [Brief description] |
-| 2: [Topic] | `Lecture02_Topic.tex` | -- | [Brief description] |
+| Item | File | Status |
+|------|------|--------|
+| Manuscript | `manuscript/[filename].tex` | [DRAFT / SUBMITTED / UNDER REVIEW] |
+| Reviewer Comments — R1 | `reviewer_comments/reviewer1.txt` | [PENDING / LOADED] |
+| Reviewer Comments — R2 | `reviewer_comments/reviewer2.txt` | [PENDING / LOADED] |
+| AE Letter | `reviewer_comments/ae_comments.txt` | [PENDING / LOADED] |
+| Response Document | `responses/responses_v[N].tex` | [NOT STARTED / DRAFT / SUBMITTED] |
+| [ANALYSIS NEEDED] items | -- | [N items remaining] |
