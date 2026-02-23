@@ -86,6 +86,6 @@ Tracks each round of reviewer responses.
   - Updated: AN4 row in summary table to reflect actual resolution
 - **Remaining author actions:**
   1. ~~Fill in `[DATE OF SUBMISSION]`~~ → filled: February 23, 2026
-  2. Confirm or swap R2.2 citations (Lu & Liao 2022; Wang et al. 2024; Schüssler-Fiorenza Rose et al. 2016)
+  2. ~~Confirm R2.2 citations~~ → confirmed: Lu & Liao 2022; Wang et al. 2024; Schüssler-Fiorenza Rose et al. 2016
 - **Quality score:** 97/100
-- **Status:** NEAR-FINAL — pending citation confirmation only
+- **Status:** FINAL — submitted 2026-02-23
