@@ -59,4 +59,18 @@ Tracks each round of reviewer responses.
   2. Fill in `[DATE OF SUBMISSION]`
   3. Replace two `[CITE]` markers in R2.2 with actual references
 - **Quality score:** 93/100
-- **Status:** NEAR-FINAL — pending 3 author actions above
+- **Status:** SUPERSEDED by v2.2 (citations filled)
+
+### v2.2 — 2026-02-23
+- **Input:** Same as v2.1; no new analysis
+- **Changes from v2.1:** Filled in [CITE] markers in R2.2 with verified references
+  - "PUF standard practice" → (Lu and Liao, 2022; Wang et al., 2024)
+  - "self-reported ADRD consistent with prior work" → (Schüssler-Fiorenza Rose et al., 2016; Wang et al., 2024)
+  - Full references appended after R2.2 response block
+- **Note:** Authors should confirm citations or substitute higher-impact alternatives
+- **Remaining author actions:**
+  1. Fill in `[N]` (run `scripts/AN4_balanced_panel.do`)
+  2. Fill in `[DATE OF SUBMISSION]`
+  3. Confirm or swap R2.2 citations
+- **Quality score:** 95/100
+- **Status:** NEAR-FINAL — pending 2 author actions + citation confirmation
