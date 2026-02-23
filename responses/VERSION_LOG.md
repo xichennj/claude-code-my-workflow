@@ -73,4 +73,19 @@ Tracks each round of reviewer responses.
   2. Fill in `[DATE OF SUBMISSION]`
   3. Confirm or swap R2.2 citations
 - **Quality score:** 95/100
-- **Status:** NEAR-FINAL — pending 2 author actions + citation confirmation
+- **Status:** SUPERSEDED by v2.3 (balanced-panel revision)
+
+### v2.3 — 2026-02-23
+- **Input:** Same as v2.2; no new analysis
+- **Changes from v2.2:** Resolved `[N]` placeholder — revised R2.1 to accurately reflect PUF data structure
+  - Diagnosis: MCBS PUF assigns new anonymized ID per beneficiary per year; cross-year linkage impossible from PUF
+  - Removed: `[N]` placeholder and balanced-panel N claim (cannot be computed from PUF)
+  - Removed: eFigure 5 balanced-panel robustness check claim (same reason)
+  - Added: explanation that PUF is a repeated cross-section; pooled DiD valid under this structure
+  - Added: Limitations note that within-person subset cannot be enumerated from PUF
+  - Updated: AN4 row in summary table to reflect actual resolution
+- **Remaining author actions:**
+  1. Fill in `[DATE OF SUBMISSION]`
+  2. Confirm or swap R2.2 citations (Lu & Liao 2022; Wang et al. 2024; Schüssler-Fiorenza Rose et al. 2016)
+- **Quality score:** 96/100
+- **Status:** NEAR-FINAL — pending date + citation confirmation
