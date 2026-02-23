@@ -11,7 +11,7 @@ note: "v2 — all [ANALYSIS NEEDED] items resolved by citing existing supplement
 
 **Manuscript:** "Risk Adjustment for ADRD in Medicare Advantage and Health Care Experiences"
 **Authors:** Wei Fu, Yuting Qian, Seyed Karimi, Hamid Zarei, Xi Chen
-**Date:** [DATE OF SUBMISSION]
+**Date:** February 23, 2026
 
 ---
 
